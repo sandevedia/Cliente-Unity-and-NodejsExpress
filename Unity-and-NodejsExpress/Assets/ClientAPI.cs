@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 public class ClientAPI : MonoBehaviour {
 
     public string url;
+    public EnemyViewController enemyViewController;
 	 void Start()
     {
         StartCoroutine(Get(url));
@@ -27,7 +28,9 @@ public class ClientAPI : MonoBehaviour {
 				{
 					// handle the result
 					var result = System.Text.Encoding.UTF8.GetString(www.downloadHandler.data);
-					Debug.Log(result);
+                    var enemy = JsonUtility.FromJson<Enemy>(result);
+
+                    enemyViewController.DisplayEnemyData(enemy.name, enemy.health.ToString(), enemy.attack.ToString());
 				}
 				else
 				{
