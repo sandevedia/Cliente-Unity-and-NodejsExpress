@@ -50,6 +50,8 @@
      <Compile Include="Assets\Enemy.cs" />
      <Compile Include="Assets\EnemyViewController.cs" />
      <Compile Include="Assets\JsonHelper.cs" />
+     <None Include="Assets\uipack-rpg\Spritesheet\uipack_rpg_sheet.xml" />
+     <None Include="Assets\uipack-rpg\license.txt" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/Santi/Desktop/Cliente-Unity-and-NodejsExpress/Unity-and-NodejsExpress/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
